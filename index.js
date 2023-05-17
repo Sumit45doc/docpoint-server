@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 app.use('/user', userRouter)
+app.use('/', (req, res) => res.send('hello world'))
 
 const CONNECTION_URL = 'mongodb+srv://sumitsharma:qwerty123@cluster0.gg8zvfl.mongodb.net/?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 3000;
